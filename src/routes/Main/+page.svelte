@@ -1,5 +1,6 @@
 <script>
     import Logo from '../../lib/images/FIG_Logo.png'
+    import Payment from '../../comp/Payment.svelte'
 </script>
   
   <div class="header">
@@ -23,6 +24,7 @@
 
       <div class="main">
         Main section
+        <Payment />
       </div>
       
       <div class="sidebar">
