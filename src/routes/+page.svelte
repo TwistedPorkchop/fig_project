@@ -3,6 +3,10 @@
     import Register from '../comp/Register.svelte';
   </script>
   
+  <svelte:head>
+	<title>Reception</title>
+	<meta name="description" content="Reception Page" />
+  </svelte:head>
   <main>
     <div id="Main_Logo">
         <img src={Logo} alt="Oops No Logo"/>
@@ -23,5 +27,17 @@
       height: max-content;
       border-radius: 25%;
     }
+    /*
+    main{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    place-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    }
+    */
   </style>
   

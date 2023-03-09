@@ -13,16 +13,23 @@
     <button class="header__cart">Cart</button>
   </div>
   
-  <div class="ad-space">
-    Ad space
-  </div>
-  
-  <div class="main">
-    Main section
-  </div>
-  
-  <div class="sidebar">
-    Sidebar section
+  <div class="page">
+
+    <div class="ad">
+      Ad space
+    </div>
+
+    <div class="content">
+
+      <div class="main">
+        Main section
+      </div>
+      
+      <div class="sidebar">
+        Sidebar section
+      </div>
+
+    </div>
   </div>
   
 
@@ -70,9 +77,26 @@
       cursor: pointer;
     }
   
+    /*Page layout styling*/
+    .page{
+      height: 100%;
+      top: 50px;
+      border-radius: 5px;
+      border-color: pink;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .content{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
     /* styles for the ad space */
-    .ad-space {
-      height: 50px;
+    .ad{
+      width: 100%;
+      height: 100px;
       border: 1px solid white;
       display: flex;
       justify-content: center;
@@ -88,6 +112,7 @@
       height: 500px;
       margin: 20px;
       background-color: black;
+      color: purple;
     }
   
     .sidebar {
@@ -96,5 +121,6 @@
       height: 500px;
       margin: 20px;
       background-color: black;
+      color: purple;
     }
   </style>
