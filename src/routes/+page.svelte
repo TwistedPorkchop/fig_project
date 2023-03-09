@@ -27,17 +27,31 @@
       height: max-content;
       border-radius: 25%;
     }
-    /*
     main{
     margin: 0;
     padding: 0;
     display: flex;
     place-items: center;
+    justify-content: center;
     min-width: 100vw;
     min-height: 100vh;
     background-color: black;
     overflow: hidden;
+    flex-direction: column;
     }
-    */
+    nav{
+      margin-top: 10px;
+      margin-left: 27%;
+      display: inline-block;
+      width: 5vw;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 50px;
+      border: none;
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+      display:flex;
+    }
   </style>
   

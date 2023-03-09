@@ -2,42 +2,29 @@
     import { loadScript } from "@paypal/paypal-js";
 
     async function test(){
-        let paypal;
+        let paypal_sdk;
         try {
-            paypal = await loadScript({ "client-id": "test" });
+            paypal_sdk = await loadScript({ "client-id": "test", "data-namespace": "paypal_sdk" });
         } catch (error) {
             console.error("failed to load the PayPal JS SDK script", error);
         }
 
-        if (paypal) {
+        if (paypal_sdk) {
             try {
-                await paypal.Buttons().render("#paypal");
+                await paypal_sdk.Buttons().render("#paypal");
             } catch (error) {
                 console.error("failed to render the PayPal Buttons", error);
             }
-
-            loadScript({ "client-id": "test" })
-            .then((paypal) => {
-                paypal
-                    .Buttons()
-                    .render("#paypal")
-                    .catch((error) => {
-                        console.error("failed to render the PayPal Buttons", error);
-                    });
-            })
-            .catch((error) => {
-                console.error("failed to load the PayPal JS SDK script", error);
-            });
         }
     }
 
 </script>
 
 <div id="paypal">
-    POPOUT
+    <button class="item" on:click={test()}>This is an Item</button>
 </div>
 
-<button class="item" on:click={console.log(test())}>This is an Item</button>
+
 
 <style>
     .item{
@@ -47,5 +34,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+#paypal{
+    width: 100px;
+    height: 100px;
 }
 </style>
